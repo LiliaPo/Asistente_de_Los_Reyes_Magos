@@ -1,32 +1,61 @@
-# Chat Nou
+# Asistente de Los Reyes Magos 👑
+
+Chat interactivo con los Reyes Magos usando IA.
 
 ## Requisitos previos
-1. Instalar Node.js desde https://nodejs.org
-2. Instalar Bun siguiendo estas instrucciones:
-   ```sh
-   # Usando PowerShell (ejecutar como administrador):
-   irm bun.sh/install.ps1|iex
-   ```
+1. Node.js (versión 18 o superior) - Descargar de https://nodejs.org
+2. Una clave API de GROQ (configurada en el archivo .env)
+
+## Estructura del proyecto
+```
+chat_nou/
+├── frontend/
+│   ├── images/
+│   │   └── reyes.webp    # Imagen de fondo
+│   ├── index.html
+│   └── styles.css
+├── backend/
+│   └── server.ts
+├── .env                  # Archivo de configuración
+└── package.json
+```
 
 ## Instalación
 
-Para instalar las dependencias:
+1. Clonar el repositorio:
 ```sh
-bun install
+git clone <url-del-repositorio>
+cd chat_nou
 ```
+
+2. Instalar dependencias:
+```sh
+npm install
+```
+
+3. Configurar el archivo .env:
+```env
+GROQ_API_KEY=tu_clave_api_aquí
+```
+
+4. Asegurarse de tener la imagen de fondo:
+- Crear la carpeta `frontend/images`
+- Añadir la imagen `reyes.webp` en esa carpeta
 
 ## Ejecución
 
-Para ejecutar la aplicación:
 ```sh
-bun run dev
+npm run dev
 ```
 
-Abre http://localhost:3000 en tu navegador
+Abrir http://localhost:3000 en el navegador
+
+## Características
+- Chat interactivo con los Reyes Magos
+- Interfaz navideña y festiva
+- Respuestas personalizadas y mágicas
+- Diseño responsive
 
 ## Notas
-- Si tienes problemas instalando Bun en Windows, puedes usar npm como alternativa:
-  ```sh
-  npm install
-  npm run dev
-  ```
+- La API key de GROQ es necesaria para el funcionamiento
+- El servidor corre en el puerto 3000 por defecto
